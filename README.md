@@ -25,4 +25,23 @@ El sistema incluirá las siguientes funcionalidades:
 - CSS
 - JavaScript
 
-## 📂 Estructura del repositorio
+## Estructura del repositorio
+
+## Estructura del repositorio
+
+proyecto-gestion-humana/
+│
+├── index.html
+├── dashboard.html
+├── actividad.html
+├── vacaciones.html
+├── rrhh.html
+├── aprobaciones.html
+├── estadisticas.html
+│
+├── css/
+│   └── styles1.css
+│
+│
+└── README.md
+
