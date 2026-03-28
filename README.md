@@ -30,6 +30,7 @@ El sistema incluirá las siguientes funcionalidades:
 ## Estructura del repositorio
 
 proyecto-gestion-humana/
+
 │
 ├── index.html
 ├── dashboard.html
