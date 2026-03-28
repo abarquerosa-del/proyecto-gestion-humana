@@ -1,6 +1,7 @@
 # Documentación del proyecto
-_Avance 1_
-En esta carpeta se almacenan los wireframes y documentación del sistema.
 
-_Avance 2_
-Se añadió 7 archivos html con estructuras del proyecto así como un css con información extensa sobre el estilo.
+## Alcance del Avance I
+Se implementaron wireframes y documentación del sistema.
+
+## Alcance del Avance II
+Se implementa la maquetación funcional utilizando HTML y CSS basada en los wireframes definidos en el Avance I.
