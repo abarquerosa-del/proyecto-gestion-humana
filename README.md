@@ -64,4 +64,4 @@ proyecto-gestion-humana/
 ## Notas finales
 Este proyecto representa la segunda iteración del sistema, enfocada en la implementación visual. En futuros avances se integrará lógica con JavaScript para hacer el sistema interactivo.
 
-- 
+ 
