@@ -8,24 +8,31 @@ Este proyecto consiste en el desarrollo de una aplicación web para la gestión 
 - Cristofer Salazar - Analista de requerimientos y planificación funcional
 - Santiago Martínes - Arquitecto Frontend 
 
-## 🎯 Alcance del proyecto
-El sistema incluirá las siguientes funcionalidades:
+## Alcance del Avance I
+En el primer avance se realizó el diseño de la interfaz mediante wireframes de alta fidelidad, definiendo la estructura visual y la navegación del sistema.
 
-### Trabajador
+## Alcance del Avance II
+En este segundo avance se implementa la maquetación funcional del sistema utilizando HTML y CSS, tomando como base los wireframes desarrollados previamente.
+
+Se desarrollaron las pantallas principales del sistema, con navegación entre ellas y una interfaz visual coherente con el diseño propuesto.
+
+## Funcionalidades implementadas
+
+### 👤 Trabajador
 - Inicio de sesión
-- Registro de actividades diarias
+- Dashboard con métricas
+- Registro de actividades
 - Solicitud de vacaciones
 
-### Administrador de Talento Humano
-- Aprobación de solicitudes de vacaciones
-- Visualización de estadísticas laborales
+### 🛠️ Recursos Humanos
+- Dashboard administrativo
+- Gestión de aprobaciones
+- Visualización de estadísticas
 
-## 🛠️ Tecnologías a utilizar
+
+## 🛠️ Tecnologías utilizadas
 - HTML
 - CSS
-- JavaScript
-
-## Estructura del repositorio
 
 ## Estructura del repositorio
 
@@ -41,3 +48,20 @@ proyecto-gestion-humana/
 - styles1.css
 - README.md
 
+## Navegación del sistema
+
+- Login → Dashboard trabajador
+- Dashboard → Registrar actividad / Solicitar vacaciones
+- RRHH → Aprobaciones / Estadísticas
+
+## Características del diseño
+- Interfaz basada en dashboard corporativo
+- Uso de sidebar para navegación
+- Diseño limpio y consistente
+- Separación de estilos en archivo CSS
+- Adaptación visual al wireframe de alta fidelidad
+
+## Notas finales
+Este proyecto representa la segunda iteración del sistema, enfocada en la implementación visual. En futuros avances se integrará lógica con JavaScript para hacer el sistema interactivo.
+
+- 
