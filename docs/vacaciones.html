@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar Vacaciones</title>
+  <link rel="stylesheet" href="./css/styles1.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="brand-logo">RK</div>
+        <div class="topbar-title">
+          <strong>Rikimaka HR System</strong>
+          <span class="role-pill">Trabajador</span>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="user-info">
+          <p>Stephanie Delgado Brenes</p>
+          <p>Trabajador</p>
+        </div>
+        <div class="avatar">SDB</div>
+        <a href="index.html"><button class="btn logout-btn">Salir</button></a>
+      </div>
+    </header>
+
+    <div class="main-layout">
+      <aside class="sidebar">
+        <div class="sidebar-label">Mi espacio</div>
+
+        <nav class="sidebar-nav">
+          <a href="dashboard.html">🏠 Dashboard</a>
+          <a href="actividad.html">📝 Registrar Actividad</a>
+          <a href="vacaciones.html" class="active">📅 Solicitar Vacaciones</a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p>Vista demo:</p>
+          <a href="rrhh.html">Cambiar a RRHH</a>
+        </div>
+      </aside>
+
+      <main class="content">
+        <div class="page-header">
+          <p class="screen-label">Pantalla 4 — Solicitar Vacaciones</p>
+          <h1>Solicitar Vacaciones</h1>
+          <p>Selecciona el período de ausencia y envía tu solicitud al equipo de RRHH</p>
+        </div>
+
+        <div class="grid-3" style="margin-bottom:32px;">
+          <div class="card metric-card">
+            <div class="metric-head">
+              <div>
+                <p class="label">Días disponibles</p>
+                <p class="value">18</p>
+                <p class="sub">Saldo del año 2026</p>
+              </div>
+              <div class="metric-icon" style="background:#DCFCE7;color:#22C55E;">📅</div>
+            </div>
+          </div>
+
+          <div class="card metric-card">
+            <div class="metric-head">
+              <div>
+                <p class="label">Días seleccionados</p>
+                <p class="value">5</p>
+                <p class="sub">En esta solicitud</p>
+              </div>
+              <div class="metric-icon" style="background:#DBEAFE;color:#2563EB;">⏳</div>
+            </div>
+          </div>
+
+          <div class="card metric-card">
+            <div class="metric-head">
+              <div>
+                <p class="label">Saldo restante</p>
+                <p class="value">13</p>
+                <p class="sub">Después de enviar</p>
+              </div>
+              <div class="metric-icon" style="background:#FEF3C7;color:#F59E0B;">📌</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-main-sidebar" style="max-width:1200px;">
+          <div class="card calendar-box">
+            <div class="calendar-header">
+              <h3>Marzo 2026</h3>
+              <div class="calendar-nav">
+                <button>‹</button>
+                <button>›</button>
+              </div>
+            </div>
+
+            <div class="calendar-grid">
+              <div class="day-head">Lu</div>
+              <div class="day-head">Ma</div>
+              <div class="day-head">Mi</div>
+              <div class="day-head">Ju</div>
+              <div class="day-head">Vi</div>
+              <div class="day-head">Sá</div>
+              <div class="day-head">Do</div>
+
+              <div class="day-empty"></div>
+              <div class="day-empty"></div>
+              <div class="day-empty"></div>
+              <div class="day-empty"></div>
+              <div class="day-empty"></div>
+              <div class="day-empty"></div>
+              <div class="day-cell day-weekend">1</div>
+
+              <div class="day-cell">2</div>
+              <div class="day-cell">3</div>
+              <div class="day-cell">4</div>
+              <div class="day-cell">5</div>
+              <div class="day-cell">6</div>
+              <div class="day-cell day-weekend">7</div>
+              <div class="day-cell day-weekend">8</div>
+
+              <div class="day-cell">9</div>
+              <div class="day-cell day-selected">10</div>
+              <div class="day-cell day-selected">11</div>
+              <div class="day-cell day-selected">12</div>
+              <div class="day-cell day-selected">13</div>
+              <div class="day-cell day-weekend">14</div>
+              <div class="day-cell day-weekend">15</div>
+
+              <div class="day-cell day-selected">16</div>
+              <div class="day-cell">17</div>
+              <div class="day-cell">18</div>
+              <div class="day-cell">19</div>
+              <div class="day-cell">20</div>
+              <div class="day-cell day-weekend">21</div>
+              <div class="day-cell day-weekend">22</div>
+
+              <div class="day-cell">23</div>
+              <div class="day-cell">24</div>
+              <div class="day-cell">25</div>
+              <div class="day-cell">26</div>
+              <div class="day-cell">27</div>
+              <div class="day-cell day-weekend">28</div>
+              <div class="day-cell day-weekend">29</div>
+
+              <div class="day-cell">30</div>
+              <div class="day-cell">31</div>
+            </div>
+
+            <div class="legend">
+              <div class="legend-item"><span class="legend-box"></span> Día disponible</div>
+              <div class="legend-item"><span class="legend-box legend-selected"></span> Día seleccionado</div>
+              <div class="legend-item"><span class="legend-box legend-weekend"></span> Fin de semana</div>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:24px;">
+            <div class="card panel">
+              <h2 class="section-title">Resumen de solicitud</h2>
+
+              <div class="side-list">
+                <div class="side-row" style="justify-content:space-between;"><span style="color:#64748B;">Inicio</span><strong>10/03/2026</strong></div>
+                <div class="side-row" style="justify-content:space-between;"><span style="color:#64748B;">Fin</span><strong>16/03/2026</strong></div>
+                <div class="side-row" style="justify-content:space-between;"><span style="color:#64748B;">Días hábiles</span><strong>5</strong></div>
+              </div>
+
+              <div style="margin-top:16px;">
+                <div class="field">
+                  <label>Comentario adicional</label>
+                  <textarea rows="4" placeholder="Agrega un comentario opcional para RRHH..."></textarea>
+                </div>
+              </div>
+
+              <div class="info-box info-success" style="margin-top:16px;">
+                ✓ Solicitud lista para enviar. Esto representa el estado final del wireframe.
+              </div>
+
+              <div class="form-actions" style="margin-top:16px;">
+                <a href="dashboard.html"><button class="btn btn-primary">📨 Enviar solicitud</button></a>
+                <a href="dashboard.html"><button class="btn btn-secondary">✕ Cancelar</button></a>
+              </div>
+            </div>
+
+            <div class="card panel">
+              <h2 class="section-title">Política rápida</h2>
+              <ol class="instructions">
+                <li><span class="step-number">1</span><span>Solo se cuentan días hábiles</span></li>
+                <li><span class="step-number">2</span><span>La solicitud debe pasar por RRHH</span></li>
+                <li><span class="step-number">3</span><span>El saldo se actualiza tras aprobación</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-flow">
+          <strong>Flujo:</strong> Login → Dashboard → <strong>Solicitar Vacaciones</strong> → RRHH
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

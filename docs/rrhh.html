@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard RRHH</title>
+  <link rel="stylesheet" href="./css/styles1.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="brand-logo">RK</div>
+        <div class="topbar-title">
+          <strong>Rikimaka HR System</strong>
+          <span class="role-pill">RRHH</span>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="user-info">
+          <p>Valeria Barquero Sancho</p>
+          <p>Administrador RRHH</p>
+        </div>
+        <div class="avatar">VBS</div>
+        <a href="index.html"><button class="btn logout-btn">Salir</button></a>
+      </div>
+    </header>
+
+    <div class="main-layout">
+      <aside class="sidebar">
+        <div class="sidebar-label">Administración</div>
+
+        <nav class="sidebar-nav">
+          <a href="rrhh.html" class="active">🏠 Dashboard RRHH</a>
+          <a href="aprobaciones.html">✅ Aprobaciones</a>
+          <a href="estadisticas.html">📊 Estadísticas</a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p>Vista demo:</p>
+          <a href="dashboard.html">Cambiar a trabajador</a>
+        </div>
+      </aside>
+
+      <main class="content">
+        <div class="page-header">
+          <p class="screen-label">RRHH — Dashboard Principal</p>
+          <h1>Panel de Control RRHH</h1>
+          <p>Valeria Sancho · Administrador RRHH · Miércoles, 4 de marzo de 2026</p>
+        </div>
+
+        <div class="grid-4" style="margin-bottom:32px;">
+          <div class="card metric-card">
+            <div class="metric-head">
+              <div>
+                <p class="label">Empleados activos</p>
+                <p class="value">12</p>
+                <p class="sub">Total empresa</p>
+              </div>
+              <div class="metric-icon" style="background:#DBEAFE;color:#2563EB;">👥</div>
+            </div>
+          </div>
+
+          <div class="card metric-card">
+            <div class="metric-head">
+              <div>
+                <p class="label">Solicitudes pendientes</p>
+                <p class="value">3</p>
+                <p class="sub">Vacaciones por revisar</p>
+              </div>
+              <div class="metric-icon" style="background:#FEF3C7;color:#F59E0B;">📅</div>
+            </div>
+          </div>
+
+          <div class="card metric-card">
+            <div class="metric-head">
+              <div>
+                <p class="label">Horas registradas</p>
+                <p class="value">400h</p>
+                <p class="sub">Esta semana</p>
+              </div>
+              <div class="metric-icon" style="background:#DCFCE7;color:#22C55E;">⏰</div>
+            </div>
+          </div>
+
+          <div class="card metric-card">
+            <div class="metric-head">
+              <div>
+                <p class="label">Eficiencia del equipo</p>
+                <p class="value">90%</p>
+                <p class="sub">Promedio semanal</p>
+              </div>
+              <div class="metric-icon" style="background:#DBEAFE;color:#2563EB;">📈</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-main-sidebar" style="max-width:1200px;">
+          <div class="card panel">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+              <h2 class="section-title" style="margin-bottom:0;">Solicitudes pendientes de aprobación</h2>
+              <a href="aprobaciones.html" style="font-size:13px;font-weight:600;color:#2563EB;">Ver todas →</a>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <div class="request-card">
+                <div class="request-left">
+                  <div class="person-avatar">JP</div>
+                  <div>
+                    <p style="font-size:14px;font-weight:600;">Juan Pérez</p>
+                    <p style="font-size:12px;color:#64748B;">10–14 Mar 2026 · 5 días</p>
+                  </div>
+                </div>
+                <div class="request-right">
+                  <p style="font-size:12px;color:#94A3B8;">Enviado 04/03/2026</p>
+                  <span class="badge badge-pendiente">Pendiente</span>
+                </div>
+              </div>
+
+              <div class="request-card">
+                <div class="request-left">
+                  <div class="person-avatar">ML</div>
+                  <div>
+                    <p style="font-size:14px;font-weight:600;">María López</p>
+                    <p style="font-size:12px;color:#64748B;">16–20 Mar 2026 · 5 días</p>
+                  </div>
+                </div>
+                <div class="request-right">
+                  <p style="font-size:12px;color:#94A3B8;">Enviado 03/03/2026</p>
+                  <span class="badge badge-pendiente">Pendiente</span>
+                </div>
+              </div>
+
+              <div class="request-card">
+                <div class="request-left">
+                  <div class="person-avatar">PR</div>
+                  <div>
+                    <p style="font-size:14px;font-weight:600;">Pedro Ramírez</p>
+                    <p style="font-size:12px;color:#64748B;">20–27 Mar 2026 · 8 días</p>
+                  </div>
+                </div>
+                <div class="request-right">
+                  <p style="font-size:12px;color:#94A3B8;">Enviado 04/03/2026</p>
+                  <span class="badge badge-pendiente">Pendiente</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions" style="margin-top:20px;">
+              <a href="aprobaciones.html"><button class="btn btn-primary">✅ Gestionar aprobaciones</button></a>
+              <a href="estadisticas.html"><button class="btn btn-secondary">📊 Ver estadísticas</button></a>
+            </div>
+          </div>
+
+          <div class="card panel">
+            <h2 class="section-title">Actividad reciente</h2>
+
+            <div class="feed-list">
+              <div class="feed-item">
+                <span class="dot" style="background:#2563EB;margin-top:5px;"></span>
+                <div><p>Carlos Gómez registró 8h en Proyecto Alpha</p><small>Hace 1h</small></div>
+              </div>
+              <div class="feed-item">
+                <span class="dot" style="background:#F59E0B;margin-top:5px;"></span>
+                <div><p>María López solicitó vacaciones del 16–20 Mar</p><small>Hace 2h</small></div>
+              </div>
+              <div class="feed-item">
+                <span class="dot" style="background:#22C55E;margin-top:5px;"></span>
+                <div><p>Ana Torres fue aprobada — Vacaciones 5–6 Mar</p><small>Hace 3h</small></div>
+              </div>
+              <div class="feed-item">
+                <span class="dot" style="background:#2563EB;margin-top:5px;"></span>
+                <div><p>Juan Pérez registró 6h en Proyecto Beta</p><small>Hace 5h</small></div>
+              </div>
+            </div>
+
+            <div style="margin-top:24px;padding-top:16px;border-top:1px solid #F1F5F9;">
+              <p style="font-size:13px;font-weight:600;margin-bottom:12px;">Carga laboral por proyecto</p>
+
+              <div class="workload-list">
+                <div class="workload-row">
+                  <span>Alpha</span>
+                  <div class="workload-track"><div class="workload-fill" style="width:40%;background:#2563EB;"></div></div>
+                  <span>40%</span>
+                </div>
+                <div class="workload-row">
+                  <span>Beta</span>
+                  <div class="workload-track"><div class="workload-fill" style="width:30%;background:#22C55E;"></div></div>
+                  <span>30%</span>
+                </div>
+                <div class="workload-row">
+                  <span>Gamma</span>
+                  <div class="workload-track"><div class="workload-fill" style="width:20%;background:#F59E0B;"></div></div>
+                  <span>20%</span>
+                </div>
+                <div class="workload-row">
+                  <span>Admin</span>
+                  <div class="workload-track"><div class="workload-fill" style="width:10%;background:#94A3B8;"></div></div>
+                  <span>10%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-flow">
+          <strong>Flujo:</strong> Login RRHH → <strong>Dashboard RRHH</strong> → Aprobaciones / Estadísticas
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprobaciones RRHH</title>
+  <link rel="stylesheet" href="./css/styles1.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="brand-logo">RK</div>
+        <div class="topbar-title">
+          <strong>Rikimaka HR System</strong>
+          <span class="role-pill">RRHH</span>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="user-info">
+          <p>Valeria Barquero Sancho</p>
+          <p>Administrador RRHH</p>
+        </div>
+        <div class="avatar">VBS</div>
+        <a href="index.html"><button class="btn logout-btn">Salir</button></a>
+      </div>
+    </header>
+
+    <div class="main-layout">
+      <aside class="sidebar">
+        <div class="sidebar-label">Administración</div>
+
+        <nav class="sidebar-nav">
+          <a href="rrhh.html">🏠 Dashboard RRHH</a>
+          <a href="aprobaciones.html" class="active">✅ Aprobaciones</a>
+          <a href="estadisticas.html">📊 Estadísticas</a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p>Vista demo:</p>
+          <a href="dashboard.html">Cambiar a trabajador</a>
+        </div>
+      </aside>
+
+      <main class="content">
+        <div class="page-header">
+          <p class="screen-label">Pantalla RRHH — Aprobaciones</p>
+          <h1>Gestión de Solicitudes</h1>
+          <p>Revisa, aprueba o rechaza las solicitudes de vacaciones del personal</p>
+        </div>
+
+        <div class="card panel">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+            <h2 class="section-title" style="margin-bottom:0;">Solicitudes de vacaciones</h2>
+            <span class="badge badge-pendiente">3 pendientes</span>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Empleado</th>
+                  <th>Período</th>
+                  <th>Días</th>
+                  <th>Enviado</th>
+                  <th>Estado</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="person-row">
+                      <div class="person-avatar">JP</div>
+                      <span><strong>Juan Pérez</strong></span>
+                    </div>
+                  </td>
+                  <td>10–14 Mar 2026</td>
+                  <td>5</td>
+                  <td>04/03/2026</td>
+                  <td><span class="badge badge-pendiente">Pendiente</span></td>
+                  <td>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                      <button class="btn btn-success">Aprobar</button>
+                      <button class="btn btn-danger">Rechazar</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="person-row">
+                      <div class="person-avatar">ML</div>
+                      <span><strong>María López</strong></span>
+                    </div>
+                  </td>
+                  <td>16–20 Mar 2026</td>
+                  <td>5</td>
+                  <td>03/03/2026</td>
+                  <td><span class="badge badge-pendiente">Pendiente</span></td>
+                  <td>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                      <button class="btn btn-success">Aprobar</button>
+                      <button class="btn btn-danger">Rechazar</button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div class="person-row">
+                      <div class="person-avatar">PR</div>
+                      <span><strong>Pedro Ramírez</strong></span>
+                    </div>
+                  </td>
+                  <td>20–27 Mar 2026</td>
+                  <td>8</td>
+                  <td>04/03/2026</td>
+                  <td><span class="badge badge-pendiente">Pendiente</span></td>
+                  <td>
+                    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                      <button class="btn btn-success">Aprobar</button>
+                      <button class="btn btn-danger">Rechazar</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="nav-flow">
+          <strong>Flujo:</strong> Dashboard RRHH → <strong>Aprobaciones</strong> → Decisión de solicitudes
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
