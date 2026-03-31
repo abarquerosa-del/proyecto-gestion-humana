@@ -37,16 +37,12 @@ Se desarrollaron las pantallas principales del sistema, con navegación entre el
 ## Estructura del repositorio
 
 proyecto-gestion-humana/
-
-- index.html
-- dashboard.html
-- actividad.html
-- vacaciones.html
-- rrhh.html
-- aprobaciones.html
-- estadisticas.html
-- styles1.css
-- README.md
+├── src/
+│   ├── index.html
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+├── README.md
 
 ## Navegación del sistema
 
