@@ -37,11 +37,20 @@ Se desarrollaron las pantallas principales del sistema, con navegación entre el
 ## Estructura del repositorio
 
 proyecto-gestion-humana/
+
+
 ├── src/
+
 │   ├── index.html
+
+
 ├── assets/
+
 │   ├── css/
+
 │   │   └── styles.css
+
+
 ├── README.md
 
 ## Navegación del sistema
