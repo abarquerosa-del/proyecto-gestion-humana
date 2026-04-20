@@ -16,23 +16,31 @@ En este segundo avance se implementa la maquetación funcional del sistema utili
 
 Se desarrollaron las pantallas principales del sistema, con navegación entre ellas y una interfaz visual coherente con el diseño propuesto.
 
-## Funcionalidades implementadas
+## Alcance del Avance III
+Implementación JavaScript
 
-### 👤 Trabajador
-- Inicio de sesión
-- Dashboard con métricas
-- Registro de actividades
-- Solicitud de vacaciones
+## Funcionalidades implementadas en JavaScript
+- Login simulado con validación de correo y contraseña
+- Validación de formularios
+- Registro dinámico de actividades
+- Eliminación de actividades
+- Envío de solicitudes de vacaciones
+- Aprobación y rechazo de solicitudes
 
-### 🛠️ Recursos Humanos
-- Dashboard administrativo
-- Gestión de aprobaciones
-- Visualización de estadísticas
+## Cómo ejecutar el proyecto
+1. Descargar o clonar el repositorio.
+2. Ubicar todos los archivos del proyecto en la misma carpeta o respetar las rutas configuradas.
+3. Abrir el archivo `index.html` en el navegador.
+4. Navegar entre las pantallas del sistema mediante los botones y enlaces disponibles.
+
+## Estructura de archivos JavaScript
+- `app.js`: contiene la lógica del frontend, validaciones, eventos y manipulación del DOM.
 
 
 ## 🛠️ Tecnologías utilizadas
 - HTML
 - CSS
+- JavaScript
 
 ## Estructura del repositorio
 
@@ -49,6 +57,10 @@ proyecto-gestion-humana/
 │   ├── css/
 
 │   │   └── styles.css
+
+├── js/
+
+│   ├── app.js
 
 
 ├── README.md
@@ -67,6 +79,6 @@ proyecto-gestion-humana/
 - Adaptación visual al wireframe de alta fidelidad
 
 ## Notas finales
-Este proyecto representa la segunda iteración del sistema, enfocada en la implementación visual. En futuros avances se integrará lógica con JavaScript para hacer el sistema interactivo.
+Este proyecto incluye programación en JavaScript para hacer el sistema interactivo.
 
  
