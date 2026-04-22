@@ -40,16 +40,28 @@ function iniciarLogin() {
     }
 
     if (!email.value.includes("@")) {
-      mostrarMensaje(message, "El correo debe tener un formato válido.", "error");
+      mostrarMensaje(
+        message,
+        "El correo debe tener un formato válido.",
+        "error",
+      );
       return;
     }
 
     if (password.value.length < 6) {
-      mostrarMensaje(message, "La contraseña debe tener al menos 6 caracteres.", "error");
+      mostrarMensaje(
+        message,
+        "La contraseña debe tener al menos 6 caracteres.",
+        "error",
+      );
       return;
     }
 
-    mostrarMensaje(message, "Inicio de sesión correcto. Redirigiendo...", "success");
+    mostrarMensaje(
+      message,
+      "Inicio de sesión correcto. Redirigiendo...",
+      "success",
+    );
 
     setTimeout(() => {
       window.location.href = "dashboard.html";
@@ -70,7 +82,12 @@ function iniciarActividad() {
     const mensaje = document.getElementById("actividadMessage");
     const lista = document.getElementById("listaActividades");
 
-    if (!proyecto.value || !descripcion.value.trim() || !horas.value || !estado.value) {
+    if (
+      !proyecto.value ||
+      !descripcion.value.trim() ||
+      !horas.value ||
+      !estado.value
+    ) {
       mostrarMensaje(mensaje, "Debes completar todos los campos.", "error");
       return;
     }
@@ -107,7 +124,7 @@ function iniciarActividad() {
 
     mostrarMensaje(mensaje, "Actividad registrada correctamente.", "success");
 
-    proyecto.value = "";
+    proyecto.selectedIndex = 0;
     descripcion.value = "";
     horas.value = "";
     estado.value = "";
@@ -127,12 +144,20 @@ function iniciarVacaciones() {
     const lista = document.getElementById("listaVacaciones");
 
     if (!inicio.value || !fin.value) {
-      mostrarMensaje(mensaje, "Debes seleccionar fecha de inicio y fecha de fin.", "error");
+      mostrarMensaje(
+        mensaje,
+        "Debes seleccionar fecha de inicio y fecha de fin.",
+        "error",
+      );
       return;
     }
 
     if (inicio.value > fin.value) {
-      mostrarMensaje(mensaje, "La fecha de inicio no puede ser mayor que la fecha final.", "error");
+      mostrarMensaje(
+        mensaje,
+        "La fecha de inicio no puede ser mayor que la fecha final.",
+        "error",
+      );
       return;
     }
 
@@ -157,7 +182,11 @@ function iniciarVacaciones() {
 
     lista.appendChild(item);
 
-    mostrarMensaje(mensaje, "Solicitud de vacaciones enviada correctamente.", "success");
+    mostrarMensaje(
+      mensaje,
+      "Solicitud de vacaciones enviada correctamente.",
+      "success",
+    );
 
     inicio.value = "";
     fin.value = "";
