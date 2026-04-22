@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   iniciarActividad();
   iniciarVacaciones();
   iniciarAprobaciones();
+  iniciarCalendario();
 });
 
 function mostrarMensaje(elemento, mensaje, tipo) {
@@ -141,7 +142,6 @@ function iniciarVacaciones() {
     const fin = document.getElementById("vacacionesFin");
     const comentario = document.getElementById("vacacionesComentario");
     const mensaje = document.getElementById("vacacionesMessage");
-    const lista = document.getElementById("listaVacaciones");
 
     if (!inicio.value || !fin.value) {
       mostrarMensaje(
@@ -161,27 +161,6 @@ function iniciarVacaciones() {
       return;
     }
 
-    const item = document.createElement("div");
-    item.className = "request-card";
-    item.style.marginBottom = "12px";
-
-    item.innerHTML = `
-      <div class="request-left">
-        <div class="person-avatar">📅</div>
-        <div>
-          <p style="font-size:14px;font-weight:600;">Solicitud enviada</p>
-          <p style="font-size:12px;color:#64748B;">Inicio: ${inicio.value}</p>
-          <p style="font-size:12px;color:#64748B;">Fin: ${fin.value}</p>
-          <p style="font-size:12px;color:#64748B;">Comentario: ${comentario.value ? comentario.value : "Sin comentario"}</p>
-        </div>
-      </div>
-      <div class="request-right">
-        <span class="badge badge-pendiente">Pendiente</span>
-      </div>
-    `;
-
-    lista.appendChild(item);
-
     mostrarMensaje(
       mensaje,
       "Solicitud de vacaciones enviada correctamente.",
@@ -192,6 +171,124 @@ function iniciarVacaciones() {
     fin.value = "";
     comentario.value = "";
   });
+}
+
+function iniciarCalendario() {
+  const celdas = document.querySelectorAll(
+    ".calendar-grid .day-cell[data-fecha]",
+  );
+  const inputInicio = document.getElementById("vacacionesInicio");
+  const inputFin = document.getElementById("vacacionesFin");
+  const diasSeleccionadosSpan = document.getElementById(
+    "diasSeleccionadosValor",
+  );
+  const saldoRestanteSpan = document.getElementById("saldoRestanteValor");
+  const diasDisponibles = 18;
+
+  let fechaInicio = null;
+  let fechaFin = null;
+
+  function contarDiasHabiles(inicio, fin) {
+    if (!inicio || !fin) return 0;
+    let start = new Date(inicio);
+    let end = new Date(fin);
+    if (start > end) return 0;
+    let dias = 0;
+    let current = new Date(start);
+    while (current <= end) {
+      const diaSemana = current.getDay();
+      if (diaSemana !== 0 && diaSemana !== 6) {
+        // 0=domingo, 6=sábado
+        dias++;
+      }
+      current.setDate(current.getDate() + 1);
+    }
+    return dias;
+  }
+
+  function actualizarSeleccion() {
+    if (fechaInicio && fechaFin) {
+      inputInicio.value = fechaInicio;
+      inputFin.value = fechaFin;
+      const dias = contarDiasHabiles(fechaInicio, fechaFin);
+      diasSeleccionadosSpan.textContent = dias;
+      const restante = diasDisponibles - dias;
+      saldoRestanteSpan.textContent = restante >= 0 ? restante : 0;
+    } else if (fechaInicio) {
+      inputInicio.value = fechaInicio;
+      inputFin.value = "";
+      diasSeleccionadosSpan.textContent = 0;
+      saldoRestanteSpan.textContent = diasDisponibles;
+    } else {
+      inputInicio.value = "";
+      inputFin.value = "";
+      diasSeleccionadosSpan.textContent = 0;
+      saldoRestanteSpan.textContent = diasDisponibles;
+    }
+
+    celdas.forEach((celda) => celda.classList.remove("day-selected"));
+    if (fechaInicio && fechaFin) {
+      const start = new Date(fechaInicio);
+      const end = new Date(fechaFin);
+      celdas.forEach((celda) => {
+        const fechaCelda = new Date(celda.getAttribute("data-fecha"));
+        if (fechaCelda >= start && fechaCelda <= end) {
+          celda.classList.add("day-selected");
+        }
+      });
+    } else if (fechaInicio) {
+      celdas.forEach((celda) => {
+        if (celda.getAttribute("data-fecha") === fechaInicio) {
+          celda.classList.add("day-selected");
+        }
+      });
+    }
+  }
+
+  function handleCeldaClick(event) {
+    const celda = event.currentTarget;
+    const fecha = celda.getAttribute("data-fecha");
+    if (!fecha) return;
+
+    if (!fechaInicio || (fechaInicio && fechaFin)) {
+      fechaInicio = fecha;
+      fechaFin = null;
+    } else {
+      if (new Date(fecha) < new Date(fechaInicio)) {
+        fechaFin = fechaInicio;
+        fechaInicio = fecha;
+      } else {
+        fechaFin = fecha;
+      }
+    }
+    actualizarSeleccion();
+  }
+
+  function sincronizarDesdeInputs() {
+    const inicio = inputInicio.value;
+    const fin = inputFin.value;
+    if (inicio && fin && new Date(fin) >= new Date(inicio)) {
+      fechaInicio = inicio;
+      fechaFin = fin;
+    } else if (inicio) {
+      fechaInicio = inicio;
+      fechaFin = null;
+    } else {
+      fechaInicio = null;
+      fechaFin = null;
+    }
+    actualizarSeleccion();
+  }
+
+  celdas.forEach((celda) => {
+    celda.addEventListener("click", handleCeldaClick);
+  });
+
+  if (inputInicio)
+    inputInicio.addEventListener("change", sincronizarDesdeInputs);
+  if (inputFin) inputFin.addEventListener("change", sincronizarDesdeInputs);
+
+  sincronizarDesdeInputs();
 }
 
 /* APROBACIONES */

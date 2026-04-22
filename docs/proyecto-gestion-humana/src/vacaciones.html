@@ -97,55 +97,55 @@
 
             <div class="calendar-grid">
               <div class="day-head">Lu</div>
-              <div class="day-head">Ma</div>
-              <div class="day-head">Mi</div>
-              <div class="day-head">Ju</div>
-              <div class="day-head">Vi</div>
-              <div class="day-head">Sá</div>
-              <div class="day-head">Do</div>
+<div class="day-head">Ma</div>
+<div class="day-head">Mi</div>
+<div class="day-head">Ju</div>
+<div class="day-head">Vi</div>
+<div class="day-head">Sá</div>
+<div class="day-head">Do</div>
 
-              <div class="day-empty"></div>
-              <div class="day-empty"></div>
-              <div class="day-empty"></div>
-              <div class="day-empty"></div>
-              <div class="day-empty"></div>
-              <div class="day-empty"></div>
-              <div class="day-cell day-weekend">1</div>
+<div class="day-empty"></div>
+<div class="day-empty"></div>
+<div class="day-empty"></div>
+<div class="day-empty"></div>
+<div class="day-empty"></div>
+<div class="day-empty"></div>
+<div class="day-cell day-weekend" data-fecha="2026-03-01">1</div>
 
-              <div class="day-cell">2</div>
-              <div class="day-cell">3</div>
-              <div class="day-cell">4</div>
-              <div class="day-cell">5</div>
-              <div class="day-cell">6</div>
-              <div class="day-cell day-weekend">7</div>
-              <div class="day-cell day-weekend">8</div>
+<div class="day-cell" data-fecha="2026-03-02">2</div>
+<div class="day-cell" data-fecha="2026-03-03">3</div>
+<div class="day-cell" data-fecha="2026-03-04">4</div>
+<div class="day-cell" data-fecha="2026-03-05">5</div>
+<div class="day-cell" data-fecha="2026-03-06">6</div>
+<div class="day-cell day-weekend" data-fecha="2026-03-07">7</div>
+<div class="day-cell day-weekend" data-fecha="2026-03-08">8</div>
 
-              <div class="day-cell">9</div>
-              <div class="day-cell day-selected">10</div>
-              <div class="day-cell day-selected">11</div>
-              <div class="day-cell day-selected">12</div>
-              <div class="day-cell day-selected">13</div>
-              <div class="day-cell day-weekend">14</div>
-              <div class="day-cell day-weekend">15</div>
+<div class="day-cell" data-fecha="2026-03-09">9</div>
+<div class="day-cell" data-fecha="2026-03-10">10</div>
+<div class="day-cell" data-fecha="2026-03-11">11</div>
+<div class="day-cell" data-fecha="2026-03-12">12</div>
+<div class="day-cell" data-fecha="2026-03-13">13</div>
+<div class="day-cell day-weekend" data-fecha="2026-03-14">14</div>
+<div class="day-cell day-weekend" data-fecha="2026-03-15">15</div>
 
-              <div class="day-cell day-selected">16</div>
-              <div class="day-cell">17</div>
-              <div class="day-cell">18</div>
-              <div class="day-cell">19</div>
-              <div class="day-cell">20</div>
-              <div class="day-cell day-weekend">21</div>
-              <div class="day-cell day-weekend">22</div>
+<div class="day-cell" data-fecha="2026-03-16">16</div>
+<div class="day-cell" data-fecha="2026-03-17">17</div>
+<div class="day-cell" data-fecha="2026-03-18">18</div>
+<div class="day-cell" data-fecha="2026-03-19">19</div>
+<div class="day-cell" data-fecha="2026-03-20">20</div>
+<div class="day-cell day-weekend" data-fecha="2026-03-21">21</div>
+<div class="day-cell day-weekend" data-fecha="2026-03-22">22</div>
 
-              <div class="day-cell">23</div>
-              <div class="day-cell">24</div>
-              <div class="day-cell">25</div>
-              <div class="day-cell">26</div>
-              <div class="day-cell">27</div>
-              <div class="day-cell day-weekend">28</div>
-              <div class="day-cell day-weekend">29</div>
+<div class="day-cell" data-fecha="2026-03-23">23</div>
+<div class="day-cell" data-fecha="2026-03-24">24</div>
+<div class="day-cell" data-fecha="2026-03-25">25</div>
+<div class="day-cell" data-fecha="2026-03-26">26</div>
+<div class="day-cell" data-fecha="2026-03-27">27</div>
+<div class="day-cell day-weekend" data-fecha="2026-03-28">28</div>
+<div class="day-cell day-weekend" data-fecha="2026-03-29">29</div>
 
-              <div class="day-cell">30</div>
-              <div class="day-cell">31</div>
+<div class="day-cell" data-fecha="2026-03-30">30</div>
+<div class="day-cell" data-fecha="2026-03-31">31</div>
             </div>
 
             <div class="legend">
@@ -167,6 +167,8 @@
       <span>Fin</span>
       <input type="date" id="vacacionesFin" style="width:auto;">
     </div>
+    <div id="diasSeleccionadosValor" class="value">0</div>
+    <div id="saldoRestanteValor" class="value">18</div>
 
               <div style="margin-top:16px;">
                 <div class="field">
@@ -194,7 +196,7 @@
             </div>
           </div>
         </div>
-
+<div id="listaVacaciones" style="margin-top: 24px;"></div>
         <div class="nav-flow">
           <strong>Flujo:</strong> Login → Dashboard → <strong>Solicitar Vacaciones</strong> → RRHH
         </div>
